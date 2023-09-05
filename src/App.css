@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.integration {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.integration > p {
+  margin: 2px;
+}
