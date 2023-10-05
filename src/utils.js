@@ -7,17 +7,15 @@ async function getKomboConnectLink(integration_tool) {
   return data.link
 }
 
-async function activateKomboIntegration(token) {
+async function activateKomboIntegration(activationToken) {
   await fetch(urls.integrations.activate, {
     method: 'POST',
-    body: JSON.stringify({ token }),
+    body: JSON.stringify({ activationToken }),
   })
 }
 
 export async function connectHris(integration_tool) {
   const link = await getKomboConnectLink(integration_tool)
-
   const activationToken = await showKomboConnect(link)
-
   await activateKomboIntegration(activationToken)
 }
