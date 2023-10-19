@@ -16,6 +16,9 @@ async function activateKomboIntegration(activationToken) {
 
 export async function connectHris(integration_tool) {
   const link = await getKomboConnectLink(integration_tool)
-  const activationToken = await showKomboConnect(link)
+  let activationToken = null;
+  try {
+    activationToken = await showKomboConnect(link)
+  } catch (e) { return }
   await activateKomboIntegration(activationToken)
 }

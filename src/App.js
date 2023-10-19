@@ -14,6 +14,10 @@ function App() {
       <button onClick={() => connectHris('googleworkspace')}>
         add Google Workspace
       </button>
+      <br />
+      <button onClick={() => connectHris()}>
+        All integrations
+      </button>
     </div>
   );
 }
